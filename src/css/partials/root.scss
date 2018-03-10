@@ -1,0 +1,27 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'roboto-regular';
+	line-height: 1.5;
+	@include wh(normal, 100vw, 100vh);
+	display: grid;
+	grid-template-columns:
+		[col-1] 250px [col-2] 1fr [col-3];
+	grid-template-rows:
+		[row-1] 55px [row-2] 1fr [row-3];
+}
+
+h1,h2,h3,h4,h5,h6,p {
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+}

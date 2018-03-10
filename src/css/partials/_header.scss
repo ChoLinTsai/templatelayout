@@ -1,0 +1,91 @@
+$header-icon: 1.25rem;
+
+
+
+header {
+	@include wh(normal, 100vw, 55px);
+	@include gridColRow(col-1,col-2,row-1,row-2);
+	background: #333;
+	display: grid;
+	grid-template-columns:
+		[col-1] 250px [col-2] 1fr [col-3] 500px [col-4];
+	grid-template-rows:
+		[row-1] 55px [row-2];
+
+	h1 {
+		@include gridColRow(col-1,col-2,row-1,row-2);
+		font-size: 1.5rem;
+		color: #fdfdfd;
+		@include gridItemPosition(start, center);
+		margin-left: 1rem;
+	}
+
+	div#info-wrap {
+		@include wh;
+		@include gridColRow(col-3,col-4,row-1,row-2);
+		display: grid;
+		grid-template-columns:
+			[col-1] 50px [col-2] 25px [col-3] 50px [col-4] 1fr [col-5] 100px [col-6];
+		grid-template-rows:
+			[row-1] 55px [row-2];
+
+		i#envelope {
+			cursor: pointer;
+			@include gridColRow(col-1,col-2,row-1,row-2);
+			@include gridItemPosition(start,center);
+			color: #f3f3f3;
+			font-size: $header-icon;
+		}
+
+		i#enevelop-point {
+			@include gridColRow(col-1,col-2,row-1,row-2);
+			@include gridItemPosition(end,center);
+			color: #fff;
+			font-size: $header-icon;
+			margin-right: 0.5rem;
+		}
+
+		i#bell {
+			cursor: pointer;
+			@include gridColRow(col-3,col-4,row-1,row-2);
+			@include gridItemPosition(start,center);
+			color: #f3f3f3;
+			font-size: $header-icon;
+		}
+
+		i#bell-point {
+			@include gridColRow(col-3,col-4,row-1,row-2);
+			@include gridItemPosition(end,center);
+			color: #fff;
+			font-size: $header-icon;
+			margin-right: 0.5rem;
+		}
+
+		div#search-wrap {
+			@include gridColRow(col-4,col-5,row-1,row-2);
+			@include wh(normal, 250px, 40px);
+			@include gridItemPosition;
+
+			input#data-search{
+				outline: none;
+			}
+
+			div.input-group-append {
+				span.input-group-text {
+					border: 0;
+					i {
+						color: #fdfdfd;
+					}
+				}
+			}
+		}
+
+		i#logout {
+			@include gridColRow(col-5,col-6,row-1,row-2);
+			@include gridItemPosition(start,center);
+			color: #fff;
+			font-size: $header-icon;
+			cursor: pointer;
+		}
+	}
+}
