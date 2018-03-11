@@ -11,14 +11,21 @@
 </head>
 
 <body>
+
 	<header>
 		<h1>Start Bootstrap</h1>
 
 		<div id="info-wrap">
-			<i id="envelope" class="fa fa-envelope"></i>
-			<i id="enevelop-point"class="fa fa-angle-right"></i>
-			<i id="bell" class="fa fa-bell"></i>
-			<i id="bell-point"class="fa fa-angle-right"></i>
+
+			<a id="envelope-wrap" href="#">
+				<i id="envelope" class="fa fa-envelope"></i>
+				<i id="enevelop-point"class="fa fa-angle-right"></i>
+			</a>
+
+			<a id="bell-wrap" href="#">
+				<i id="bell" class="fa fa-bell"></i>
+				<i id="bell-point"class="fa fa-angle-right"></i>
+			</a>
 
 			<div id="search-wrap" class="input-group">
 				<input id="data-search" type="text" class="form-control" placeholder="Search for...">
@@ -29,10 +36,85 @@
 				</div>
 			</div>
 
-			<i id="logout" class="fa fa-arrow-right">Logout</i>
+			<a href="#" id="logout-wrap">
+				<i id="logout" class="fa fa-sign-out">Logout</i>
+			</a>
 
 		</div>
 	</header>
+
+	<nav>
+		<ul>
+
+			<a id="dashboard" href="#">
+				<li class="liItems">
+					<i class="fa fa-tachometer"></i>
+					<p>Dashboard</p>
+				</li>
+			</a>
+
+			<a id="charts" href="#">
+				<li class="liItems">
+					<i class="fa fa-area-chart"></i>
+					<p>Charts</p>
+				</li>
+			</a>
+
+			<a id="tables" href="#">
+				<li class="liItems">
+					<i class="fa fa-table"></i>
+					<p>Tables</p>
+				</li>
+			</a>
+
+			<a id="components" href="#">
+				<li class="liItems">
+					<i class="fa fa-wrench"></i>
+					<p>Components</p>
+					<i class="fa fa-chevron-right point-right"></i>
+				</li>
+			</a>
+
+			<a id="pages" href="#">
+				<li class="liItems">
+					<i class="fa fa-file-o"></i>
+					<p>Example Pages</p>
+					<i class="fa fa-chevron-right point-right"></i>
+				</li>
+			</a>
+
+			<a id="menu" href="#">
+				<li class="liItems">
+					<i class="fa fa-sitemap"></i>
+					<p>Menu Levels</p>
+					<i class="fa fa-chevron-right point-right"></i>
+				</li>
+			</a>
+
+			<a id="links" href="#">
+				<li class="liItems">
+					<i class="fa fa-link"></i>
+					<p>Link</p>
+				</li>
+			</a>
+
+		</ul>
+
+
+		<section id="nav-footer">
+			<a id="point-left" href="#">
+				<i class="fa fa-chevron-left"></i>
+			</a>
+		</section>
+	</nav>
+
+	<main>
+		<section id="data-card">
+			<div id="table-header"></div>
+			<div id="table-footer"></div>
+		</section>
+	</main>
+
 
 
 

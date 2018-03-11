@@ -1,20 +1,16 @@
 $header-icon: 1.25rem;
 
-
-
 header {
 	@include wh(normal, 100vw, 55px);
 	@include gridColRow(col-1,col-2,row-1,row-2);
 	background: #333;
 	display: grid;
-	grid-template-columns:
-		[col-1] 250px [col-2] 1fr [col-3] 500px [col-4];
-	grid-template-rows:
-		[row-1] 55px [row-2];
+	grid-template-columns: [col-1] 250px [col-2] 1fr [col-3] 500px [col-4];
+	grid-template-rows: [row-1] 55px [row-2];
 
 	h1 {
 		@include gridColRow(col-1,col-2,row-1,row-2);
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		color: #fdfdfd;
 		@include gridItemPosition(start, center);
 		margin-left: 1rem;
@@ -24,41 +20,56 @@ header {
 		@include wh;
 		@include gridColRow(col-3,col-4,row-1,row-2);
 		display: grid;
-		grid-template-columns:
-			[col-1] 50px [col-2] 25px [col-3] 50px [col-4] 1fr [col-5] 100px [col-6];
-		grid-template-rows:
-			[row-1] 55px [row-2];
+		grid-template-columns: [col-1] 50px [col-2] 15px [col-3] 50px [col-4] 1fr [col-5] 100px [col-6];
+		grid-template-rows: [row-1] 55px [row-2];
 
-		i#envelope {
+		a#envelope-wrap {
 			cursor: pointer;
+			@include wh(normal, 100%, 100%);
 			@include gridColRow(col-1,col-2,row-1,row-2);
-			@include gridItemPosition(start,center);
-			color: #f3f3f3;
-			font-size: $header-icon;
+			@include gridItemPosition;
+			@include flex;
+			&:hover {
+				i#envelope{
+					color: #55E9BC;
+				}
+			}
+			i#envelope {
+				color: #f3f3f3;
+				font-size: $header-icon;
+			}
+
+			i#enevelop-point {
+				color: #fff;
+				font-size: $header-icon;
+				margin-left: 0.5rem;
+			}
 		}
 
-		i#enevelop-point {
-			@include gridColRow(col-1,col-2,row-1,row-2);
-			@include gridItemPosition(end,center);
-			color: #fff;
-			font-size: $header-icon;
-			margin-right: 0.5rem;
-		}
-
-		i#bell {
+		a#bell-wrap {
 			cursor: pointer;
+			@include wh(normal, 100%, 100%);
 			@include gridColRow(col-3,col-4,row-1,row-2);
-			@include gridItemPosition(start,center);
-			color: #f3f3f3;
-			font-size: $header-icon;
-		}
+			@include gridItemPosition;
+			@include flex;
 
-		i#bell-point {
-			@include gridColRow(col-3,col-4,row-1,row-2);
-			@include gridItemPosition(end,center);
-			color: #fff;
-			font-size: $header-icon;
-			margin-right: 0.5rem;
+			&:hover {
+				text-decoration: none;
+				i#bell {
+					color: #FCE38A;
+				}
+			}
+
+			i#bell {
+				color: #f3f3f3;
+				font-size: $header-icon;
+			}
+
+			i#bell-point {
+				color: #fff;
+				font-size: $header-icon;
+				margin-left: 0.5rem;
+			}
 		}
 
 		div#search-wrap {
@@ -66,13 +77,14 @@ header {
 			@include wh(normal, 250px, 40px);
 			@include gridItemPosition;
 
-			input#data-search{
+			input#data-search {
 				outline: none;
 			}
 
 			div.input-group-append {
 				span.input-group-text {
 					border: 0;
+
 					i {
 						color: #fdfdfd;
 					}
@@ -80,12 +92,20 @@ header {
 			}
 		}
 
-		i#logout {
-			@include gridColRow(col-5,col-6,row-1,row-2);
-			@include gridItemPosition(start,center);
-			color: #fff;
-			font-size: $header-icon;
+		a#logout-wrap {
 			cursor: pointer;
+			@include wh;
+			@include gridColRow(col-5,col-6,row-1,row-2);
+			@include gridItemPosition;
+			@include flex;
+			&:hover {
+				text-decoration: none;
+				background: #FF2E63;
+			}
+			i#logout {
+				color: #fff;
+				font-size: $header-icon;
+			}
 		}
 	}
 }

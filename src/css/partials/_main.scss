@@ -1,0 +1,39 @@
+main {
+	@include wh;
+	@include gridColRow(col-2,col-3,row-2,row-3);
+	background: #fff;
+	display: grid;
+	grid-template-columns:
+		[col-1] 1rem [col-2] 1fr [col-3] 1rem
+		[col-4];
+	grid-template-rows:
+		[row-1] 1rem [row-2] 1fr [row-3] 1rem [row-4] 50px [row-5];
+
+	section#data-card {
+		@include wh;
+		@include gridColRow(col-2,col-3,row-2,row-3);
+		background: mistyrose;
+		border-radius: 5px;
+		display: grid;
+		grid-template-columns:
+			[col-1] 40px [col-2] 1fr [col-3] 40px [col-4];
+		grid-template-rows:
+			[row-1] 50px [row-2] 65px [row-3] 1fr
+			[row-4] 65px [row-5] 50px [row-6];
+
+		div#table-header {
+			@include wh;
+			@include gridColRow(col-1,col-4,row-1,row-2);
+			background: goldenrod;
+			border-radius: 5px;
+		}
+
+		div#table-footer {
+			@include wh;
+			@include gridColRow(col-1,col-4,row-5,row-6);
+			background: goldenrod;
+			border-radius: 5px;
+		}
+
+	}
+}

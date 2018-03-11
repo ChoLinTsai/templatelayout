@@ -16,7 +16,7 @@ const cssDev = [
   'sass-loader', {
     loader: 'sass-resources-loader',
     options: {
-      resources: './src/css/partials/resources/*.scss'
+      resources: './src/css/resources/*.scss'
     }
   },
   'postcss-loader'
@@ -29,7 +29,7 @@ const cssProd = ExtractTextPlugin.extract({
     'sass-loader', {
       loader: 'sass-resources-loader',
       options: {
-        resources: './src/css/partials/resources/*.scss'
+        resources: './src/css/resources/*.scss'
       }
     },
     'postcss-loader'

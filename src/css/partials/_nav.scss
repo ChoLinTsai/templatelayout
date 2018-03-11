@@ -1,0 +1,117 @@
+nav {
+	@include gridColRow(col-1,col-2,row-2,row-3);
+	background: #333;
+	display: grid;
+	grid-template-columns:
+	[col-1] 1fr [col-2];
+	grid-template-rows:
+	[row-1] 420px [row-2] 1fr [row-3] 60px [row-4];
+
+	ul {
+		@include gridColRow(col-1,col-2,row-1,row-2);
+		list-style-type: none;
+		display: grid;
+		grid-template-columns:
+		[col-1] 1fr [col-2];
+		grid-template-rows:
+		[row-1] 60px [row-2] 60px [row-3] 60px [row-4] 60px [row-5] 60px [row-6] 60px [row-7] 60px [row-8];
+
+		a {
+			cursor: pointer;
+			@include wh;
+			&:hover {
+				text-decoration: none;
+				background: #F07B3F;
+				li.liItems {
+					p {
+						// color: yellow;
+					}
+					i.point-right {
+						// color: #FFDD00;
+					}
+				}
+			}
+			li.liItems {
+				@include wh;
+				list-style: none;
+				display: grid;
+				grid-template-columns:
+					[col-1] 40px [col-2] 1fr [col-3]
+					30px [col-4];
+				grid-template-rows:
+					[row-1] 60px [row-2];
+
+				i {
+					@include gridColRow(col-1,col-2,row-1,row-2);
+					@include gridItemPosition;
+					color: #fdfdfd;
+					font-size: 1rem;
+				}
+				p {
+					@include gridColRow(col-2,col-3,row-1,row-2);
+					@include gridItemPosition(start,center);
+					color: #fff;
+					font-size: 1rem;
+				}
+
+				i.point-right {
+					@include gridColRow(col-3,col-4,row-1,row-2);
+					@include gridItemPosition;
+				}
+			}
+		}
+
+		a#dashboard {
+			@include wh;
+			@include gridColRow(col-1,col-2,row-1,row-2);
+		}
+
+		a#charts {
+			@include wh;
+			@include gridColRow(col-1,col-2,row-2,row-3);
+		}
+
+		a#tables {
+			@include wh;
+			@include gridColRow(col-1,col-2,row-3,row-4);
+		}
+
+		a#components {
+			@include wh;
+			@include gridColRow(col-1,col-2,row-4,row-5);
+		}
+
+		a#pages {
+			@include wh;
+			@include gridColRow(col-1,col-2,row-5,row-6);
+		}
+
+		a#menu {
+			@include wh;
+			@include gridColRow(col-1,col-2,row-6,row-7);
+		}
+
+		a#links {
+			@include wh;
+			@include gridColRow(col-1,col-2,row-7,row-8);
+		}
+	}
+
+	section#nav-footer {
+		@include wh;
+		@include gridColRow(col-1,col-2,row-3,row-4);
+		background: #202020;
+
+		a#point-left {
+			@include wh;
+			@include flex;
+			&:hover {
+				text-decoration: none;
+				background: #F07B3F;
+			}
+			i {
+				color: #fff;
+			}
+		}
+	}
+}

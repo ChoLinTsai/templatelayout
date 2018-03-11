@@ -1,7 +1,8 @@
 @import '../bootstrap/customizations.scss';
-@import "./partials/resources/fonts.scss";
-
-@import "./partials/root.scss";
+@import "./resources/fonts.scss";
 
 
+@import "./partials/_root.scss";
 @import "./partials/_header.scss";
+@import "./partials/_nav.scss";
+@import "./partials/_main.scss";
