@@ -1,4 +1,5 @@
 nav {
+	@include wh;
 	@include gridColRow(col-1,col-2,row-2,row-3);
 	background: #333;
 	display: grid;
@@ -21,15 +22,7 @@ nav {
 			@include wh;
 			&:hover {
 				text-decoration: none;
-				background: #F07B3F;
-				li.liItems {
-					p {
-						// color: yellow;
-					}
-					i.point-right {
-						// color: #FFDD00;
-					}
-				}
+				background: #42a5f5;
 			}
 			li.liItems {
 				@include wh;

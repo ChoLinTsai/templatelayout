@@ -1,1 +1,7 @@
 $brand-success: green !default;
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  background-color: #17B978;
+	color: #fdfdfd;
+}
